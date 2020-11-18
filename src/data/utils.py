@@ -3,7 +3,7 @@ import cv2
 
 def split_image_horizontally(path):
 
-    img = cv2.imread(path)
+    img = cv2.imread(path) if type(path) == str else path
 
     height, width = img.shape[:2]
 
